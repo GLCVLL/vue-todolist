@@ -20,7 +20,8 @@
         <ul class="list-group">
             <li class="list-group-item" v-for="todo in todos" :key="todo.text" :class="{ 'text-decoration-line-through': todo.done }">
                 {{ todo.text }}
-                <span class="delete-icon" @click="deleteTodo(i)">x</span>            </li>
+                <span class="delete-icon" @click="deleteTodo(index)">x</span>            
+            </li>
         </ul>
     </div>
 </body>

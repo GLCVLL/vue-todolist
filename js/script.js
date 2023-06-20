@@ -8,11 +8,16 @@ const app = Vue.createApp({
         return {
             todos: [
                 { text: 'Comprare shampoo', done: false },
-                { text: 'Pulire giardino', done: true },
+                { text: 'Pulire giardino', done: false },
                 { text: 'Fare passeggiata con il cane', done: false },
                 { text: 'Preparare torta compleanno', done: true },
                 { text: 'Sistemare cucina', done: false }
             ]
+        }
+    },
+    methods: {
+        deleteTodo(index) {
+            this.todos.splice(index, 1);
         }
     }
 });
