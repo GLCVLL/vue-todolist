@@ -12,13 +12,22 @@ const app = Vue.createApp({
                 { text: 'Fare passeggiata con il cane', done: false },
                 { text: 'Preparare torta compleanno', done: true },
                 { text: 'Sistemare cucina', done: false }
-            ]
-        }
+            ],
+
+            newTodoText: '',
+        };
     },
     methods: {
         deleteTodo(index) {
             this.todos.splice(index, 1);
-        }
+        },
+
+        addTodo() {
+            if (this.newTodoText.trim !== '') {
+                this.todos.push({ text: this.newTodoText, done: false});
+                this.newTodoText = '';
+            }
+        },
     }
 });
 

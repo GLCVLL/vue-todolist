@@ -22,6 +22,10 @@
                 {{ todo.text }}
                 <span class="delete-icon" @click="deleteTodo(index)">x</span>            
             </li>
+            <li class="list-group-item">
+                <input type="text" v-model="newTodoText" placeholder="Inserisci cosa fare" class="px-3">
+                <button @click="addTodo" class="btn btn-success mx-3">Aggiungi</button>
+            </li>
         </ul>
     </div>
 </body>
