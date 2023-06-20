@@ -20,10 +20,10 @@
         <ul class="list-group">
             <li class="list-group-item" v-for="todo in todos" :key="todo.text" :class="{ 'text-decoration-line-through': todo.done }">
                 {{ todo.text }}
-                <span class="delete-icon" @click="deleteTodo(index)">x</span>            
+                <span class="delete-icon" @click="deleteTodo(todo.id)">x</span>            
             </li>
             <li class="list-group-item">
-                <input type="text" v-model="newTodoText" placeholder="Inserisci cosa fare" class="px-3">
+                <input type="text" v-model="newTodoText" placeholder="Inserisci cosa fare" class="px-3" @keydown.enter="addTodo">
                 <button @click="addTodo" class="btn btn-success mx-3">Aggiungi</button>
             </li>
         </ul>
