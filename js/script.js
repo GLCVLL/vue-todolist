@@ -31,6 +31,10 @@ const app = Vue.createApp({
                 this.newTodoText = '';
             }
         },
+
+        toggleDone(todo) {
+            todo.done = !todo.done;
+        }
     }
 });
 

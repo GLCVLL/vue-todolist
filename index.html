@@ -18,7 +18,7 @@
 <body>
     <div id="root" class="container-fluid mt-3">
         <ul class="list-group">
-            <li class="list-group-item" v-for="todo in todos" :key="todo.text" :class="{ 'text-decoration-line-through': todo.done }">
+            <li class="list-group-item" v-for="todo in todos" :key="todo.text" :class="{ 'text-decoration-line-through': todo.done }" @click="toggleDone(todo)">
                 {{ todo.text }}
                 <span class="delete-icon" @click="deleteTodo(todo.id)">x</span>            
             </li>
